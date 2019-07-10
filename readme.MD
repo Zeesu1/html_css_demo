@@ -1,1 +1,1 @@
-this is some html+css exercise demo
+Here are some HTML + CSS exercises
