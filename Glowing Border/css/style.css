@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 居中 */
+  min-height: 100vh;
+  background: #060c21;
+  font-family: 'Poppins', sans-serif;
+}
+.box{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #060c21;
+}
+.box:before{
+  z-index: -1
+}
+.box:after{
+  z-index: -2;
+  filter: blur(40px);
+  /* 高斯模糊 */
+}
+.box:before,
+.box:after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: linear-gradient(to bottom right, #89ff00,#060c21,#00bcd4);
+  /* 背景渐变 */
+}
+.content{
+  padding: 20px;
+  box-sizing: border-box;
+  color: aliceblue;
+}
