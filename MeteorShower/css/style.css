@@ -17,7 +17,7 @@ body{
   /* background: cornflowerblue; */
 }
 .star{
-  /* width: 2px; */
+  /* width: 20px; */
   height: 2px;
   background: linear-gradient(-45deg, #c7eeee,rgba(0,0,255,0));
   position: absolute;
@@ -26,43 +26,43 @@ body{
   animation: scaling 2.5s ease-in-out infinite,moveTo 2.5s ease-in-out infinite;
 }
 .star:nth-child(1){
-  top: 30%;
-  left: 25%;
+  top: 20%;
+  left: 20%;
   animation-delay: 6s;
 }
 .star:nth-child(2){
-  top: 42%;
-  left: 32%;
+  top: 22%;
+  left: 25%;
   animation-delay: 5s;
 }
 .star:nth-child(3){
-  top: 52%;
-  left: 35%;
+  top: 24%;
+  left: 30%;
   animation-delay: 2.8s;
 }
 .star:nth-child(4){
-  top: 64%;
-  left: 41%;
+  top: 26%;
+  left: 35%;
   animation-delay: 2.5;
 }
 .star:nth-child(5){
-  top: 32%;
-  left: 32%;
+  top: 28%;
+  left: 40%;
   animation-delay: 3s;
 }
 .star:nth-child(6){
-  top: 44%;
-  left: 25%;
+  top: 30%;
+  left: 20%;
   animation-delay: 2s;
 }
 .star:nth-child(7){
-  top: 58%;
-  left: 25%;
+  top: 18%;
+  left: 28%;
   animation-delay: 1s;
 }
 .star:nth-child(8){
-  top: 54%;
-  left: 42%;
+  top: 34%;
+  left: 32%;
   animation-delay: 1.5s;
 }
 .star:nth-child(9){
@@ -76,28 +76,28 @@ body{
   animation-delay: 3.5s;
 }
 .star:nth-child(11){
-  top: 60%;
+  top: 40%;
   left: 20%;
   animation-delay: 4s;
 }
 .star:nth-child(12){
-  top: 50%;
-  left: 20%;
+  top: 42%;
+  left: 28%;
   animation-delay: 5.5s;
 }
 .star:nth-child(13){
   top: 55%;
-  left: 45%;
+  left: 20%;
   animation-delay: 1.2s;
 }
 .star:nth-child(14){
   top: 46%;
-  left: 45%;
+  left: 35%;
   animation-delay: 3.8s;
 }
 .star:nth-child(15){
   top: 48%;
-  left: 40%;
+  left: 26%;
   animation-delay: 3.4s;
 }
 .star:nth-child(16){
@@ -106,23 +106,23 @@ body{
   animation-delay: .6s;
 }
 .star:nth-child(17){
-  top: 40%;
-  left: 40%;
+  top: 38%;
+  left: 36%;
   animation-delay: 5.2s;
 }
 .star:nth-child(18){
   top: 50%;
-  left: 50%;
+  left: 20%;
   animation-delay: 4s;
 }
 .star:nth-child(19){
-  top: 70%;
-  left: 28%;
+  top: 60%;
+  left: 30%;
   animation-delay: 3s;
 }
 .star:nth-child(20){
   top: 60%;
-  left: 40%;
+  left: 20%;
   animation-delay: 2s;
 }
 @keyframes scaling {
