@@ -1,0 +1,14 @@
+#box {
+  position: absolute;
+  left:200px;
+  top:200px;
+  width: 200px;
+  border:1px solid #333;
+  height: 200px;
+  background-color: #009cc9;
+  text-align: center;
+  -webkit-user-select: none;  /* Chrome all / Safari all /opera15+*/  
+-moz-user-select: none;     /* Firefox all */  
+-ms-user-select: none;      /* IE 10+ */  
+user-select: none;  
+}

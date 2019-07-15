@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标拖动</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="box" style="left:200px;top:200px;" onselectstart="return false;"> box </div>
+	</div>
+	<script>
+		var o, X, Y;
+		document.getElementById('box').onmousedown = function (e) {
+			o = this;
+			e = e || event;
+			X = e.clientX - parseInt(o.style.left);
+			Y = e.clientY - parseInt(o.style.top);
+		}
+		document.onmousemove = function (e) {
+			if (!o) {
+				return;
+			}
+			e = e || event;
+			o.style.left = e.clientX - X + "px";
+			o.style.top = e.clientY - Y + "px";
+		}
+		document.onmouseup = function () {
+			o = "";
+		}
+	</script>
+</body>
+
+</html>
