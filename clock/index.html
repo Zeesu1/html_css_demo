@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>clock</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="author" content="zeesu1" />
+    <link rel="icon" type="image/x-icon" href="../img/ico.ico" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100vh;
+        width: 100vw;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var canvasEl = document.querySelector("#canvas");
+        var canvasCtx = canvasEl.getContext("2d");
+        var x = 200;
+        var y = 200;
+
+        startTime();
+
+        function startTime() {
+          //分秒刻度和表盘
+          canvasCtx.lineWidth = 1;
+          for (var i = 0; i < 60; i++) {
+            drawArc(150, i * 6, (i + 1) * 6);
+          }
+          drawArc(145, 0, 360, true);
+
+          //时刻度
+          canvasCtx.lineWidth = 2;
+          for (var i = 0; i < 12; i++) {
+            drawArc(150, i * 30, (i + 1) * 30);
+          }
+          drawArc(140, 0, 360, true);
+
+          //针
+          drawHand(getTime().hour, 5, 60, "#ECFC00");
+          drawHand(getTime().min, 4, 100, "#00BB3F");
+          drawHand(getTime().sec, 3, 130, "#D60062");
+
+          setInterval(function () {
+            drawArc(135, 0, 360, true);
+            drawHand(getTime().hour, 5, 60, "#ECFC00");
+            drawHand(getTime().min, 4, 100, "#00BB3F");
+            drawHand(getTime().sec, 3, 130, "#D60062");
+          }, 1000);
+        }
+
+        function drawArc(iRadius, iBeginAngle, iEndAngle, ifClear) {
+          var beginRadian = (iBeginAngle * Math.PI) / 180;
+          var endRadian = (iEndAngle * Math.PI) / 180;
+
+          canvasCtx.beginPath(); //创建一个路径
+          canvasCtx.moveTo(x, y); //将路径移到x，y
+          canvasCtx.arc(x, y, iRadius, beginRadian, endRadian, false);
+          //画弧
+          !ifClear && canvasCtx.stroke();
+
+          if (ifClear) {
+            canvasCtx.fillStyle = "white";
+            canvasCtx.fill();
+          }
+        }
+
+        function drawHand(iAngle, iWidth, iLength, iColor) {
+          canvasCtx.save(); //保存的是canvas的属性，不是截图
+          canvasCtx.lineWidth = iWidth;
+          canvasCtx.strokeStyle = iColor;
+          drawArc(iLength, iAngle, iAngle);
+          canvasCtx.restore(); //弹出栈中的状态
+        }
+
+        //根据当前时间返回各个针要指的度数
+        function getTime() {
+          var jTime = {};
+          var iNow = new Date();
+          jTime.sec = -90 + iNow.getSeconds() * 6;
+          jTime.min = -90 + iNow.getMinutes() * 6 + iNow.getSeconds() / 20;
+          jTime.hour = -90 + iNow.getHours() * 30 + iNow.getMinutes() / 2;
+
+          return jTime;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+  </body>
+</html>
