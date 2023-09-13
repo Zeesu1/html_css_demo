@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Border Effect</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="author" content="zeesu1" />
+    <link rel="icon" type="image/x-icon" href="../img/ico.ico" />
+    <link rel="stylesheet" href="./style.css" class="css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="cloud"></div>
+    </div>
+
+    <script>
+      const randomLetter = () => {
+        const letters = 'abcdefghijklmnopqrstuvwxyz0123456789'
+        const randomIndex = Math.floor(Math.random() * letters.length)
+        return letters[randomIndex]
+      }
+      
+      const rain = () => {
+        const cloudEl = document.querySelector('.cloud')
+
+        const letterEl = document.createElement('div')
+        const left = Math.floor(Math.random() * 300)
+        const fontSize = Math.random() * 1.5
+        const duration = Math.random() * 1
+        const rotate = Math.random() * 360
+        letterEl.classList.add('letter')
+        letterEl.innerHTML = randomLetter()
+        letterEl.style.left = `${left}px`
+        letterEl.style.fontSize = `${0.5 + fontSize}em`
+        letterEl.style.animationDuration = `${1 + duration}s`
+        letterEl.style.transform = `rotate(${rotate}deg)`
+        cloudEl.appendChild(letterEl)
+
+        setTimeout(() => {
+          cloudEl.removeChild(letterEl)
+        }, 2000)
+      }
+
+      setInterval(() => {
+        rain()
+      }, 40)
+    </script>
+  </body>
+</html>

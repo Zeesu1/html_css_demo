@@ -8,6 +8,7 @@
 - [Floating Picture](https://zeesu1.github.io/html_css_demo/floating-picture/index.html)
 - [Collapse Menu](https://zeesu1.github.io/html_css_demo/collapse-menu/index.html)
 - [Glowing Border](https://zeesu1.github.io/html_css_demo/glowing-border/index.html)
+- [Letter Rain](https://zeesu1.github.io/html_css_demo/letter-rain/index.html)
 - [Windows Loading](https://zeesu1.github.io/html_css_demo/loading/index.html)
 - [Login Button](https://zeesu1.github.io/html_css_demo/login-button/index.html)
 - [Meteor Shower](https://zeesu1.github.io/html_css_demo/MeteorShower/index.html)
