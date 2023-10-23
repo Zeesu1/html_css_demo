@@ -14,4 +14,5 @@
 - [Meteor Shower](https://zeesu1.github.io/html_css_demo/MeteorShower/index.html)
 - [Nest](https://zeesu1.github.io/html_css_demo/nest/index.html)
 - [Picture Text](https://zeesu1.github.io/html_css_demo/picture-text/index.html)
+- [Scroll Nav Menu](https://zeesu1.github.io/html_css_demo/scroll-nav-menu/index.html)
 - [TikTok](https://zeesu1.github.io/html_css_demo/tiktok/index.html)
